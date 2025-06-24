@@ -1,4 +1,4 @@
-package org.example.entities;
+package com.trainBooking.app.entities;
 
 import java.util.List;
 public class User {
@@ -7,13 +7,11 @@ public class User {
     public User(String name,
                 String hashedPassword,
                 String email,
-                List<Ticket> ticketsBooked,
                 String userId) {
         this.userId = userId;
         this.name = name;
         this.email = email;
         this.hashedPassword = hashedPassword;
-        this.ticketsBooked = ticketsBooked;
     }
 
     public String getName() {
@@ -28,10 +26,6 @@ public class User {
         return hashedPassword;
     }
 
-    public List<Ticket> getTicketsBooked() {
-        return ticketsBooked;
-    }
-
     public String getUserId() {
         return userId;
     }
@@ -42,10 +36,6 @@ public class User {
 
     public void setHashedPassword(String hashedPassword) {
         this.hashedPassword = hashedPassword;
-    }
-
-    public void setTicketsBooked(List<Ticket> ticketsBooked) {
-        this.ticketsBooked = ticketsBooked;
     }
 
     public void setEmail(String email) {
@@ -60,11 +50,5 @@ public class User {
     private String name;
     private String email;
     private String hashedPassword;
-    private List<Ticket> ticketsBooked;
 
-    public void printTickets() {
-        for (Ticket ticket : ticketsBooked) {
-            System.out.println(ticket.getTicketInfo());
-        }
-    }
 }
