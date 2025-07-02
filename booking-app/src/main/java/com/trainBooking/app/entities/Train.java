@@ -22,7 +22,7 @@ public class Train {
         this.originStation = originStation;
         this.arrivalStation = arrivalStation;
         this.stationTimes = stationTimes;
-        this.seats = new ArrayList<Boolean>();
+        this.seats = new ArrayList<>();
         for(int i = 0; i < row; i++) {
             List<Boolean> seatRow = new ArrayList<>();
             for(int j = 0; j < column; j++) {
@@ -83,12 +83,11 @@ public class Train {
     public void displayTrainInfo() {
         System.out.println("Train id "+trainId);        
         System.out.println("Train name "+trainName);        
-        System.out.println("Train name "+trainName);        
         System.out.println("Origin Station "+originStation);        
         System.out.println("Arrival Station "+arrivalStation);        
         System.out.println("The Seats");
         seats.stream()
-             .map(s -> s.stream().
+             .map(s -> s.stream()
                   .map(row -> row ? "[x]":"[ ]")
                   .collect(Collectors.joining(" ")))
              .forEach(System.out::println);
