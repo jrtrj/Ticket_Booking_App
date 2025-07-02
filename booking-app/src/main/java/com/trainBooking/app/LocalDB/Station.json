@@ -1,0 +1,15 @@
+
+[
+  {
+    "stationId": "S1",
+    "stationName": "Station A"
+  },
+  {
+    "stationId": "S2",
+    "stationName": "Station B"
+  },
+  {
+    "stationId": "S3",
+    "stationName": "Station C"
+  }
+]

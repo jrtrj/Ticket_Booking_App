@@ -1,0 +1,24 @@
+[
+  {
+    "trainId": "T1",
+    "trainName": "Express 1",
+    "originStation": {
+      "stationId": "S1",
+      "stationName": "Station A"
+    },
+    "arrivalStation": {
+      "stationId": "S3",
+      "stationName": "Station C"
+    },
+    "seats": [
+      [false, false, true],
+      [true, false, true],
+      [false, true, false]
+    ],
+    "stationTimes": {
+      "S1": "2025-07-01T10:00:00",
+      "S2": "2025-07-01T12:00:00",
+      "S3": "2025-07-01T14:00:00"
+    }
+  }
+]

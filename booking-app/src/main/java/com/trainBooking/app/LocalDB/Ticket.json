@@ -1,0 +1,15 @@
+[
+  {
+    "ticketId": "TK1",
+    "user": {
+      "userId": "U1",
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    "train": {
+      "trainId": "T1",
+      "trainName": "Express 1"
+    },
+    "seatNumber": "A1"
+  }
+]
