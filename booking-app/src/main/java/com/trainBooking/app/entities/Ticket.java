@@ -6,7 +6,6 @@ public class Ticket {
     private String userId;
     private String trainId;
     private int ticketPrice;
-    private String destination;
     private String dateOfTravel;
 
     public String getTicketId() {
@@ -41,14 +40,6 @@ public class Ticket {
         if(ticketPrice < 0)
             throw new IllegalArgumentException("The price cannot be negative");
         this.ticketPrice = ticketPrice;
-    }
-
-    public String getDestination() {
-        return destination;
-    }
-
-    public void setDestination(String destination) {
-        this.destination = destination;
     }
 
     public String getTicketInfo() {

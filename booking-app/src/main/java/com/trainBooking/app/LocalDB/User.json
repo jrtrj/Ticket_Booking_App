@@ -2,11 +2,13 @@
   {
     "userId": "U1",
     "name": "Alice",
-    "email": "alice@example.com"
+    "email": "alice@example.com",
+    "hashedPassword": "$2a$10$eI.e./aE4s.gJz0/aH4.ie.2/aE4s.gJz0/aH4.ie.2/aE4s.gJz"
   },
   {
     "userId": "U2",
     "name": "Bob",
-    "email": "bob@example.com"
+    "email": "bob@example.com",
+    "hashedPassword": "$2a$10$eI.e./aE4s.gJz0/aH4.ie.2/aE4s.gJz0/aH4.ie.2/aE4s.gJz"
   }
 ]

@@ -2,7 +2,7 @@ package com.trainBooking.app.entities;
 
 public class Station {
     private String station;
-    private String stationName;
+    private String stationId;
     
     public String getStation() {
        return station;
@@ -13,11 +13,10 @@ public class Station {
     }
     
     public String getStationName() {
-       return stationName;
+       return stationId;
     }
 
-    public void setStationName(String stationName) {
-        this.stationName = stationName;
+    public void setStationName(String stationId) {
+        this.stationId = stationId;
     }
-    
 }

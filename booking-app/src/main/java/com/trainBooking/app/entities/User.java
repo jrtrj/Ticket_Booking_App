@@ -1,17 +1,17 @@
 package com.trainBooking.app.entities;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import java.util.List;
 public class User {
     public User() {}
 
     public User(String name,
-                String hashedPassword,
-                String email,
-                String userId) {
-        this.userId = userId;
+                String password,
+                String email) {
         this.name = name;
         this.email = email;
-        this.hashedPassword = hashedPassword;
+        this.hashedPassword = BCrypt.hashpw(password,BCrypt.gensalt());
     }
 
     public String getName() {
@@ -32,10 +32,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setHashedPassword(String hashedPassword) {
-        this.hashedPassword = hashedPassword;
     }
 
     public void setEmail(String email) {
