@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.trainBooking.app.Util.AuthUtil;
+import com.trainBooking.app.entities.Ticket;
 import com.trainBooking.app.entities.User;
 
 public class UserService {
@@ -25,7 +26,7 @@ public class UserService {
         }
     }
 
-    public void readUserFromDB() throws IOException {
+    private void readUserFromDB() throws IOException {
         userList = jsonDBService.readAll(userDBPath,new TypeReference<List<User>>(){});
     }
 
@@ -58,11 +59,12 @@ public class UserService {
             System.err.println("Could not write into db during signUp "+e.getMessage());
         }
     }
+    private final Ticket userTicket = new Ticket();
+    public void getTicketInfo() {
+        System.out.printf("Ticket ID: %s belongs to User %s on %s with train id %s",
+                userTicket.getTicketId(), userTicket.getUserId(), userTicket.getDateOfTravel(), userTicket.getTrainId());
+    }
+    public boolean bookTicket() {
+
+    }
 }
-//                userList.add(loggedInUser);
-//                try {
-//                        jsonDBService.writeAll(userDBPath, userList);
-//                }catch(IOException e) {
-//        System.err.println("loginUser failed at writing to DB" + e.getMessage());
-//        }
-//

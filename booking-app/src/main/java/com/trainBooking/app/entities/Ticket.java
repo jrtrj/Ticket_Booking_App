@@ -8,6 +8,14 @@ public class Ticket {
     private int ticketPrice;
     private String dateOfTravel;
 
+    public String getDateOfTravel() {
+        return dateOfTravel;
+    }
+
+    public void setDateOfTravel(String dateOfTravel) {
+        this.dateOfTravel = dateOfTravel;
+    }
+
     public String getTicketId() {
         return ticketId;
     }
@@ -42,8 +50,4 @@ public class Ticket {
         this.ticketPrice = ticketPrice;
     }
 
-    public String getTicketInfo() {
-        return String.format("Ticket ID: %s belongs to User %s on %s with train id %s", 
-                             ticketId, userId, dateOfTravel,trainId);
-    }
 }
